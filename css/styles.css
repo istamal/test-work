@@ -17,11 +17,6 @@ body {
     background-color: #ccf;
 }
 
-img {
-    height: auto;
-    width: auto;
-}
-
 h1 {
     font-size: 20px;
     color: #666;
@@ -42,7 +37,7 @@ label {
 }
 
 
-.content,
+.wrapper,
 form,
 .form,
 .share-buttons,
@@ -52,15 +47,20 @@ form,
     display: flex;
 }
 
-.content {
+.wrapper {
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.img {
+.img-wrapper {
     width: 550px;
     background-image: url(../img/bg.jpg);
     background-size: cover;
+}
+
+.content-img {
+    width: auto;
+    height: auto;
 }
 
 form {
@@ -114,7 +114,7 @@ form {
 }
 
 .line {
-    max-width: 100px;
+    width: 100px;
     height: 1px;
     background-color: #ccc;
 }
@@ -229,7 +229,9 @@ label[for="checkbox"] {
 }
 
 @media only screen and (max-width : 992px) {
-
+    .content-img {
+        display: none;
+    }
 }
 
 @media only screen and (max-width : 768px) {
