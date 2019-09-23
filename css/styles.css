@@ -28,7 +28,7 @@ h1 {
 .selection-header,
 .email,
 .phone,
-label {
+.radio-buttons {
     margin-bottom: 30px;
 }
 
@@ -76,6 +76,7 @@ form {
 
 .share-buttons {
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .share-buttons a {
@@ -131,6 +132,7 @@ form {
 
 .inputs {
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .email,
@@ -154,6 +156,10 @@ form {
     color: #aaa;
 }
 
+.radio-buttons {
+
+}
+
 label {
     line-height: inherit;
     font-size: 12px;
@@ -165,7 +171,8 @@ input[type="radio"]:checked+label::before {
 }
 
 input[type="radio"] {
-    display: none;
+    opacity: 0;
+    width: 1px;
 }
 
 label[for="individual"]:hover .notify {
@@ -239,6 +246,15 @@ label[for="checkbox"] {
 }
 
 @media only screen and (max-width : 480px) {
+    .share-buttons a  {
+        width: 100%;
+        padding: 15px;
+    } 
+
+    .email,
+    .phone {
+        width: 100%;
+    }
 
 }
 
@@ -246,4 +262,9 @@ label[for="checkbox"] {
     .line {
         width: 40px;
     }
+
+    .form {
+        padding: 20px;
+    }
+
 }
